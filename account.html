@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>sample</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/page_style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src='http://tinymce.cachefly.net/4.1/tinymce.min.js'></script>
+</head>
+
+<body>
+
+    <!--/////////////////////////////////////////////////////-->
+    <!--/////////////////////////////////////////////////////-->
+    <!--////////////////////////메뉴창////////////////////////-->
+    <!--팝업 메세지-->
+    <div class="popupChat_bg"></div>
+    <div class="popupChat_box">
+        <div class="popupChat_header">
+            <h3>메세지</h3>
+            <img src="images/set.png" alt="">
+            <h4><a href="chat.html">대화창으로 가기</a></h4>
+        </div>
+        <div class="popupChat_list">
+            <img src="images/chat_img.png" alt="">
+            <p>Here's where your'll find all your recent messages.</p>
+        </div>
+    </div>
+
+    <!--팝업 사용자-->
+    <div class="popupTeam_box">
+        <ul>
+            <li>
+                <span>A</span>
+                <div>
+                    <h3>userName</h3>
+                    <h4>팀원 관리, 결제, 설정 그 외 더보기</h4>
+                </div>
+            </li>
+        </ul>
+        <div class="popupTeam_workBtn">
+            <img src="images/projectadd_36.png" alt="">
+            <p>새 워크스페이스 만들기</p>
+        </div>
+    </div>
+    <div class="popupTeam_bg"></div>
+
+    <!--팝업 도움말-->
+    <div class="popupHelp_box">
+        <ul>
+            <li>
+                <p>새소식</p>
+            </li>
+            <li>
+                <p>튜토리얼</p>
+            </li>
+            <li>
+                <p>사용자 가이드</p>
+            </li>
+            <li>
+                <p>위크플로우 팁</p>
+            </li>
+            <li>
+                <p>문의하기</p>
+            </li>
+            <li>
+                <p>리뷰 남기기</p>
+            </li>
+        </ul>
+    </div>
+    <div class="popupHelp_bg"></div>
+
+    <div class="bodyDiv"></div>
+    <div class="menuHiddenWrap"></div>
+    <!--//////////////////////// 상단메뉴 ////////////////////////-->
+    <section class="projectMain_menuTop">
+        <!-- 상단메뉴중 파란색부분 -->
+        <div class="menuTop_1">
+
+            <div class="hiddenMenu">
+                <!-- 2017-07-14 -->
+                <img src="images/ic_menu_white_24dp.png" alt="">
+            </div>
+            <div class="newAddMenu">
+                <!-- 2017-07-14 -->
+                <img src="images/ic_close_white_24dp.png" alt="">
+            </div>
+            <!-- 검색 -->
+            <ul class="menuTop_1_ul">
+                <li class="searchBtn">
+                    <img src="images/search_white.png" alt="">
+                </li>
+                <li class="chatBtn">
+                    <img src="images/chatting.png" alt="">
+                </li>
+                <li class="helpBtn">
+                    <img src="images/customerservice.png" alt="">
+                </li>
+                <!-- 프로젝트 이름 영역 (드롭박스) -->
+                <li class="menuTop_1_li newWorkSpaceOpenBtn">
+                    <p>Func</p>
+                    <img src="images/fold_2.png" alt="">
+                </li>
+
+                <!-- 유저이미지 영역 -->
+                <li class="userProfileOpenBtn">
+                    <img src="images/profile_45.png" alt="">
+                </li>
+            </ul>
+
+            <ul class="menuTop_1_ul_hidden">
+                <li class="searchBtn"><img src="images/search_white.png" alt=""></li>
+                <li class="chatBtn"><img src="images/chatting.png" alt=""></li>
+                <li class="helpBtn"><img src="images/alarm.png" alt=""></li>
+            </ul>
+        </div>
+    </section>
+
+    <!--//////////////////////// 좌측메뉴 ////////////////////////-->
+    <secton class="menuLeft_hidden">
+        <div>
+            <p>use name</p>
+            <img class="menuLeft_hidden_arrow" src="images/ic_chevron_right_white_24dp.png" alt="">
+            <img class="menuLeft_hidden_useImg" src="images/profile_45.png" alt="">
+        </div>
+        <ul>
+            <li>
+                <img src="images/home.png" alt="">
+                <p>전체 개요</p>
+            </li>
+            <li>
+                <img src="images/projectlist.png" alt="">
+                <p>프로젝트</p>
+            </li>
+            <li>
+                <img src="images/memberlist.png" alt="">
+                <p>멤버</p>
+            </li>
+            <li>
+                <img src="images/chat.png" alt="">
+                <p>대화</p>
+            </li>
+        </ul>
+    </secton>
+
+    <secton class="menuLeft_hidden_bg">
+    </secton>
+
+    <section class="menuLeft_teamPanel">
+        <img class="menuLeft_teamPanel_closeBtn" src="images/projectdelete.png" alt="">
+        <ul>
+            <li>
+                <span>U</span>
+                <h3>userName</h3>
+                <h4>팀원 관리, 결제, 설정 그 외 더보기...</h4>
+            </li>
+            <li>
+                <span>U</span>
+                <h3>userName</h3>
+                <h4>팀원 관리, 결제, 설정 그 외 더보기...</h4>
+            </li>
+        </ul>
+        <div>
+            <img src="images/projectadd_36.png" alt="">
+            <p>새 워크스페이스 만들기</p>
+        </div>
+    </section>
+
+    <section class="menuLeft_userPanel">
+        <img class="menuLeft_userPanel_closeBtn" src="images/projectdelete.png" alt="">
+        <div class="userBox">
+            <div class="menuLeft_userPanel_profileBox">
+                <img src="images/profile_45.png" alt="">
+                <div>
+                    <span></span>
+                    <h3>userName</h3>
+                    <h4>userNmae@naver.com</h4>
+                </div>
+            </div>
+        </div>
+        <div class="settingBox">
+            <ul>
+                <li>
+                    <h3>계정 설정</h3>
+                    <h4>프로필, 이메일, 언어, 타임존 그 외 더보기...</h4>
+                </li>
+                <li>
+                    <h3>알림 설정</h3>
+                    <h4>브라우저와 이메일 알림</h4>
+                </li>
+            </ul>
+        </div>
+        <div class="logoutBox">
+            <p>로그아웃</p>
+        </div>
+    </section>
+    <section class="menuLeft_userPanel_bg"></section>
+
+    <section class="projectMain_menuLeft">
+        <div>
+            <div class="menuLeft_hiddenMenu">
+                <p>Func</p>
+                <img src="images/fold_2.png" alt="">
+            </div>
+
+            <ul class="menuLeft_top">
+                <li class="newAddMenu">
+                    <img src="images/ic_close_white_24dp.png" alt="" title="">
+                    <span>새로 만들기</span>
+                </li>
+
+                <li>
+                    <a href="alarm.html">
+                        <img src="images/alarm.png" alt="" title="알림">
+                        <span>알림</span>
+                    </a>
+                </li>
+
+                <!-- 전체보기 메뉴 -->
+                <li>
+                    <a href="summary_work.html">
+                        <img src="images/home.png" alt="" title="전체개요">
+                        <span>전체 개요</span>
+                    </a>
+                </li>
+                <!-- 전체프로젝트 메뉴 -->
+                <!-- li에 클래스 menuLeft_Select을 주면 선택css적용 -->
+                <li class="menuLeft_Select menuLeft_projectBtn">
+                    <a href="project.html">
+                        <img src="images/projectlist.png" alt="" title="프로젝트">
+                        <span>프로젝트</span>
+                    </a>
+                </li>
+                <!-- 채팅 메뉴 -->
+                <li>
+                    <a href="chat.html">
+                        <img src="images/chatting.png" alt="" title="채팅">
+                        <span>채팅</span>
+                    </a>
+                </li>
+            </ul>
+
+            <ul class="menuLeft_bottom">
+                <li class="menuLeft_team">
+                    <p class="bottomPanelOpen">F</p>
+                </li>
+                <li class="menuLeft_partner"><img src="images/profile_45.png" alt=""></li>
+                <li class="menuLeft_partner chat_seclect"><img src="images/profile_45.png" alt=""></li>
+                <!-- 새메세지 -->
+                <li class="menuLeft_newMsg"><img src="images/new_chatting.png" alt=""></li>
+            </ul>
+        </div>
+    </section>
+
+    <!--    상단 메뉴 새로추가-->
+    <section class="menuTop_add">
+        <div></div>
+        <ul>
+            <li>
+                <img src="images/list.png" alt="">
+                <p>새 업무</p>
+            </li>
+            <li>
+                <img src="images/project.png" alt="">
+                <p>새 프로젝트</p>
+            </li>
+            <li>
+                <img src="images/comment.png" alt="">
+                <p>새 대화 체널</p>
+            </li>
+            <li>
+                <img src="images/member.png" alt="">
+                <p>멤버 초대하기</p>
+            </li>
+        </ul>
+    </section>
+
+    <!--    검색창-->
+    <section class="menuTop_search">
+        <div class="searchBox_bg"></div>
+        <div class="searchBox">
+            <img src="images/back.png" alt="">
+            <input type="text" placeholder="검색">
+        </div>
+    </section>
+
+
+    <!--//////////////////////// 왼쪽 패널 ////////////////////////-->
+    <div class="projectMain_leftPanelDiv">
+        <div class="projectMain_leftPanelWrap">
+            <div>
+                <img src="images/search.png" alt="">
+                <input type="text" placeholder="프로젝트 검색하기">
+            </div>
+
+            <!-- 프로젝트 생성 -->
+            <div class="projectMain_leftPanelBox">
+                <div>
+                    <img src="images/fold.png" alt="">
+                    <p>최근 프로젝트()</p>
+                </div>
+                <ul>
+                    <li>
+                        <img src="images/public.png" alt="">
+                        <span>프로젝트1</span>
+                        <p class="projectMain_leftPanelBookmark">
+                            <input type='checkbox' class="project_CheckBox" id="projectMain_leftPanel_bookmark_1" />
+                            <label class="project_CheckBoxLable" for="projectMain_leftPanel_bookmark_1"></label>
+                            <style>
+                                input[type=checkbox]#projectMain_leftPanel_bookmark_1+label {
+                                    background: url(images/bookmark_off.png);
+                                }
+                                
+                                input[type=checkbox]#projectMain_leftPanel_bookmark_1:checked+label {
+                                    background: url(images/bookmark_on.png);
+                                }
+
+                            </style>
+                        </p>
+                    </li>
+                    <li>
+                        <img src="images/public.png" alt="">
+                        <span>프로젝트1</span>
+                        <p class="projectMain_leftPanelBookmark">
+                            <input type='checkbox' class="project_CheckBox" id="projectMain_leftPanel_bookmark_2" />
+                            <label class="project_CheckBoxLable" for="projectMain_leftPanel_bookmark_2"></label>
+                            <style>
+                                input[type=checkbox]#projectMain_leftPanel_bookmark_2+label {
+                                    background: url(images/bookmark_off.png);
+                                }
+                                
+                                input[type=checkbox]#projectMain_leftPanel_bookmark_2:checked+label {
+                                    background: url(images/bookmark_on.png);
+                                }
+
+                            </style>
+                        </p>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="projectMain_leftPanelBox">
+                <div>
+                    <img src="images/fold.png" alt="">
+                    <p></p>
+                </div>
+                <ul>
+                    <li>
+                        <img src="images/public.png" alt="">
+                        <span>프로젝트1</span>
+                        <p class="projectMain_leftPanelBookmark">
+                            <input type='checkbox' class="project_CheckBox" id="projectMain_leftPanel_bookmark_3" />
+                            <label class="project_CheckBoxLable" for="projectMain_leftPanel_bookmark_3"></label>
+                            <style>
+                                input[type=checkbox]#projectMain_leftPanel_bookmark_3+label {
+                                    background: url(images/bookmark_off.png);
+                                }
+                                
+                                input[type=checkbox]#projectMain_leftPanel_bookmark_3:checked+label {
+                                    background: url(images/bookmark_on.png);
+                                }
+
+                            </style>
+                        </p>
+                    </li>
+                </ul>
+            </div>
+
+            <p class="projectMain_leftPanel_AllProject"></p>
+        </div>
+    </div>
+
+    <div class="leftDiv_Wrap">
+        <div>
+        </div>
+    </div>
+    <a href="project.html">
+        <div class="leftDiv_left">
+
+            <div class="leftDiv_bottom_1"></div>
+            <div class="leftDiv_bottom_2"></div>
+        </div>
+    </a>
+
+
+    <!--////////////////////////메뉴창////////////////////////-->
+    <!--/////////////////////////////////////////////////////-->
+    <!--/////////////////////////////////////////////////////-->
+
+    <section class="AccountSection">
+        <div class="acutSectionDiv">
+            <h1>계정 설정</h1>
+
+            <div class="acutSection_nav">
+                <p class="Account_setBtn">설정</p>
+                <p class="Account_pfileBtn">프로필</p>
+            </div>
+
+            <div class="acutSection_setDiv">
+                <div class="acutSection_setBox">
+                    <div class="acutSection_setTitleBox">
+                        <p>이메일 주소</p>
+                        <span>펼치기</span>
+                    </div>
+                    <div class="acutSection_setConBox acutSecton_setFirstBox">
+                        <h3>현재 이메일 주소</h3>
+                        <input type="text" value="test.com" disabled>
+                        <h3>새 이메일 주소</h3>
+                        <input type="text">
+
+                        <button>이메일 업데이트</button>
+                    </div>
+                </div>
+
+                <div class="acutSection_setBox">
+                    <div class="acutSection_setTitleBox">
+                        <p>비밀번호</p>
+                        <span>펼치기</span>
+                    </div>
+                    <div class="acutSection_setConBox acutSecton_setFirstBox">
+                        <h3>현재 비밀번호</h3>
+                        <input type="text" value="test.com" disabled>
+                        <h3>새 비밀번호</h3>
+                        <input type="text">
+                        <h3>새 비밀번호 확인</h3>
+                        <input type="text">
+
+                        <button>비밀번호 업데이트</button>
+
+                        <h4>현재 비밀번호가 기억나지 않습니까?</h4>
+                        <span>비밀번호 찾기</span>
+                    </div>
+                </div>
+
+                <div class="acutSection_setBox">
+                    <div class="acutSection_setTitleBox">
+                        <p>타임존</p>
+                        <span>펼치기</span>
+                    </div>
+                    <div class="acutSection_setConBox acutSecton_setFirstBox">
+                        <p>Taskworld는 설정된 타임존을 기반으로 요약과 알림 이메일을 보냅니다. 이메일은 활동 로그, 미리알림 내역을 포함합니다.</p>
+                        <select>
+                            <option value=""></option>
+                            <option value=""></option>
+                        </select>
+                        <button>타임존 업데이트</button>
+                    </div>
+                </div>
+
+                <div class="acutSection_setBox">
+                    <div class="acutSection_setTitleBox">
+                        <p>언어</p>
+                        <span>펼치기</span>
+                    </div>
+                    <div class="acutSection_setConBox acutSecton_setFirstBox">
+                        <select>
+                            <option value=""></option>
+                            <option value=""></option>
+                        </select>
+                        <button>언어 업데이트</button>
+                    </div>
+                </div>
+
+
+                <div class="acutSection_setBox">
+                    <div class="acutSection_setTitleBox">
+                        <p>이메일 & 바탕화면 알림 설정</p>
+                        <span>펼치기</span>
+                    </div>
+
+                    <div class="acutSection_setConBox acutSecton_setFirstBox">
+                        <div class="acutSection_setConBoxDiv">
+                            <h3>메세지: 다음 경우에 이메일 알림을 보냅니다</h3>
+                            <h5>누군가 나에게 다이렉트 메시지를 보낼 때</h5>
+                            <label class="switch">
+                                <input type="checkbox" class="projectMain_panelPublicToggle" checked>
+                                <div class="slider round"></div>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="acutSection_setConBox acutSection_setConBox2">
+                        <div class="acutSection_setConBoxDiv ">
+                            <h3>업무 활동: 다음 경우에 이메일 알림을 보냅니다</h3>
+                            <div class="acutSection_setConBoxSub">
+                                <h5>나에게 업무가 배정될 때</h5>
+                                <label class="switch">
+                                    <input type="checkbox" class="projectMain_panelPublicToggle" checked>
+                                    <div class="slider round"></div>
+                                </label>
+                            </div>
+                            <div class="acutSection_setConBoxSub">
+                                <h5>내 업무의 마감일이 지났을 때</h5>
+                                <label class="switch">
+                                    <input type="checkbox" class="projectMain_panelPublicToggle" checked>
+                                    <div class="slider round"></div>
+                                </label>
+                            </div>
+                            <div class="acutSection_setConBoxSub">
+                                <h5>내 업무의 마감일이 가까울 때</h5>
+                                <h6>(이메일 미리 알림을 업무 마감일 24시간 전에 보냅니다)</h6>
+                                <label class="switch">
+                                    <input type="checkbox" class="projectMain_panelPublicToggle" checked>
+                                    <div class="slider round"></div>
+                                </label>
+                            </div>
+                            <div class="acutSection_setConBoxSub">
+                                <h5>누군가 내 업무에 코멘트를 달았을 때</h5>
+                                <label class="switch">
+                                    <input type="checkbox" class="projectMain_panelPublicToggle" checked>
+                                    <div class="slider round"></div>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="acutSection_setConBox acutSection_setConBox2">
+                        <div class="acutSection_setConBoxDiv ">
+                            <h3>오늘의 중요한 일 :</h3>
+                            <h5>매일 아침 마감일 지난 업무와 당일 해야할 일을 이메일로 보냅니다.</h5>
+                            <label class="switch">
+                                <input type="checkbox" class="projectMain_panelPublicToggle" checked>
+                                <div class="slider round"></div>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="acutSection_setConBox acutSection_setConBox2">
+                        <div class="acutSection_setConBoxDiv ">
+                            <h3>바탕화면 알림</h3>
+                            <h5>바탕화면 알림을 보냅니다</h5>
+                            <label class="switch">
+                                <input type="checkbox" class="projectMain_panelPublicToggle" checked>
+                                <div class="slider round"></div>
+                            </label>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="acutSection_pfileDiv">
+                <div class="acutSection_pfileDivWrap">
+                    <div class="acutSection_pfileDivImg">
+                        <div>
+                            <img src="https://enterprise-cdn.taskworld.com/assets/default-avatar-4dc02b82.svg" alt="">
+                            <p>사진 업데이트</p>
+                        </div>
+                    </div>
+                    <div class="acutSection_pfileDivCon">
+                        <div class="acutSection_pfileDivConWrap">
+                            <div class="acutSection_pfileBox">
+                                <h4>성</h4>
+                                <input type="text">
+                            </div>
+                            <div class="acutSection_pfileBox">
+                                <h4>이름</h4>
+                                <input type="text">
+                                <p>팀원들이 본인을 알아볼 수 있도록 도와주세요.</p>
+                            </div>
+                            <div class="acutSection_pfileBox">
+                                <h4>부서</h4>
+                                <input type="text">
+                                <p>부서명으로 본인을 찾을 수 있도록 도와주세요. 예) 디자인팀</p>
+                            </div>
+                            <div class="acutSection_pfileBox">
+                                <h4>직함</h4>
+                                <input type="text">
+                                <p>자신이 무엇을 하는지 팀원들에게 알려주세요. 예)웹디자이너</p>
+                            </div>
+                            <div class="acutSection_pfileBox">
+                                <h4>전화번호</h4>
+                                <input type="text">
+                                <p>팀원들이 본인에게 연락할 수 있도록 도와주세요.</p>
+                            </div>
+                            <div class="acutSection_pfileBox">
+                                <h4>주소</h4>
+                                <input type="text">
+                                <p>팀원들이 본인을 지도에서 찾을 수 있도록 도와주세요!</p>
+                            </div>
+                            <div class="acutSection_pfileBox">
+                                <h4>생년월일</h4>
+                                <select>
+                                    <option value="">1일</option>
+                                    <option value="">2일</option>
+                                    <option value="">3일</option>
+                                    <option value="">4일</option>
+                                    <option value="">5일</option>
+                                    <option value="">6일</option>
+                                    <option value="">7일</option>
+                                    <option value="">8일</option>
+                                    <option value="">9일</option>
+                                    <option value="">10일</option>
+                                    <option value="">11일</option>
+                                    <option value="">12일</option>
+                                    <option value="">13일</option>
+                                    <option value="">14일</option>
+                                    <option value="">15일</option>
+                                    <option value="">16일</option>
+                                    <option value="">17일</option>
+                                    <option value="">18일</option>
+                                    <option value="">19일</option>
+                                    <option value="">20일</option>
+                                    <option value="">21일</option>
+                                    <option value="">22일</option>
+                                    <option value="">23일</option>
+                                    <option value="">24일</option>
+                                    <option value="">25일</option>
+                                    <option value="">26일</option>
+                                    <option value="">27일</option>
+                                    <option value="">28일</option>
+                                    <option value="">29일</option>
+                                    <option value="">30일</option>
+                                    <option value="">31일</option>
+                                </select>
+
+                                <select>
+                                    <option value="">1월</option>
+                                    <option value="">2월</option>
+                                    <option value="">3월</option>
+                                    <option value="">4월</option>
+                                    <option value="">5월</option>
+                                    <option value="">6월</option>
+                                    <option value="">7월</option>
+                                    <option value="">8월</option>
+                                    <option value="">9월</option>
+                                    <option value="">10월</option>
+                                    <option value="">11월</option>
+                                    <option value="">12월</option>
+                                </select>
+
+                                <select>
+                                    <option value="">2017</option>
+                                    <option value="">2016</option>
+                                    <option value="">2015</option>
+                                    <option value="">2014</option>
+                                    <option value="">2013</option>
+                                    <option value="">2012</option>
+                                    <option value="">2011</option>
+                                    <option value="">2010</option>
+                                    <option value="">2009</option>
+                                    <option value="">2008</option>
+                                    <option value="">2007</option>
+                                    <option value="">2006</option>
+                                    <option value="">2005</option>
+                                    <option value="">2004</option>
+                                    <option value="">2003</option>
+                                    <option value="">2002</option>
+                                    <option value="">2001</option>
+                                    <option value="">1999</option>
+                                    <option value="">1998</option>
+                                    <option value="">1997</option>
+                                    <option value="">1996</option>
+                                    <option value="">1995</option>
+                                    <option value="">1994</option>
+                                    <option value="">1993</option>
+                                    <option value="">1992</option>
+                                    <option value="">1991</option>
+                                    <option value="">1990</option>
+                                    <option value="">1989</option>
+                                    <option value="">1988</option>
+                                    <option value="">1987</option>
+                                    <option value="">1986</option>
+                                    <option value="">1985</option>
+                                    <option value="">1984</option>
+                                    <option value="">1983</option>
+                                    <option value="">1982</option>
+                                    <option value="">1981</option>
+                                </select>
+                                <p>생일날 팀원들에게 축하를 받으세요!</p>
+
+                                <button>변경사항 저장</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--
+   
+   <div class="drawer">
+        <iframe></iframe>
+        <button onclick="closeDrawer()">닫기</button>
+    </div>
+   
+-->
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="js/index.js"></script>
+    <!--
+    <style>
+		.drawer,iframe { height:100%; width:100%;  margin:0; position: absolute; border: 10px solid red; z-index: 99;}
+		.wrapper { background: yellow;}
+		ul { margin:0 }
+		button { position: absolute; right: 100px; top:20px; }
+	</style>
+-->
+
+
+    <script>
+        //        $(".menuTop_add ul li:nth-child(1)").click(function() {
+        //            openDrawer('c.html');
+        //        });
+        //        
+        //        function openDrawer(src) {
+        //            $(".drawer iframe").attr("src", src);
+        //            $(".drawer").css({
+        //                display: "block"
+        //            });
+        //        }
+        //
+        //        function closeDrawer() {
+        //            $(".drawer").css({
+        //                display : "none"
+        //            });
+        //        }
+
+
+        $(".Account_setBtn").click(function() {
+            AccountTabFun(true);
+        });
+
+        $(".Account_pfileBtn").click(function() {
+            AccountTabFun(false);
+        });
+
+        //계정탭
+        //true : 설정
+        //false : 계정
+        function AccountTabFun(chk) {
+            if (chk == true) {
+                $(".acutSection_setDiv").css({
+                    "display": "block"
+                });
+                $(".acutSection_pfileDiv").css({
+                    "display": "none"
+                });
+                $(".Account_setBtn").css({
+                    "background-color": "#d4d6db"
+                });
+                $(".Account_pfileBtn").css({
+                    "background-color": "#e6e8ec"
+                });
+            } else {
+                $(".acutSection_setDiv").css({
+                    "display": "none"
+                });
+                $(".acutSection_pfileDiv").css({
+                    "display": "block"
+                });
+                $(".Account_setBtn").css({
+                    "background-color": "#e6e8ec"
+                });
+                $(".Account_pfileBtn").css({
+                    "background-color": "#d4d6db"
+                });
+            }
+        }
+
+        $(".acutSection_setTitleBox").click(function() {
+            var index = $(".acutSection_setTitleBox").index(this);
+
+            var this_text = $(this).children("span");
+            var this_box = $(this).parent().children(".acutSection_setConBox");
+
+            var text = $(".acutSection_setTitleBox:not(:eq(" + index + "))").children("span");
+            var box = $(".acutSection_setTitleBox:not(:eq(" + index + "))").parent().children(".acutSection_setConBox");
+
+            //제외영역
+            text.html("펼치기");
+            //box.css({"display" : "none"});
+            $(box).slideUp(280);
+            if (this_box.css("display") == "none") {
+                this_text.html("닫기");
+                //this_box.css({"display" : "block"});        
+                $(this_box).slideDown(280);
+            } else {
+                this_text.html("펼치기");
+                //this_box.css({"display" : "none"});    
+                $(this_box).slideUp(280);
+            }
+        });
+
+        //설정 리스트 초기화
+        function AccountListToggleSet() {
+            $(".acutSection_setConBox").css({
+                "display": "none"
+            });
+        }
+
+        $(document).ready(function() {
+            //설정 리스트 초기화
+            //설정탭으로 초기화
+            AccountListToggleSet();
+            AccountTabFun(true);
+        });
+
+    </script>
+
+</body>
+
+</html>
